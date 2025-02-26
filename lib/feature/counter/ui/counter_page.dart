@@ -25,6 +25,7 @@ class _CounterPageState extends State<CounterPage> {
         title: Text("counter page"),
       ),
       body: BlocBuilder<CounterBloc, CounterState>(
+        // block builder rebuilds the state
         bloc: counterBloc,
         builder: (context, state) {
           switch (state.runtimeType) {
